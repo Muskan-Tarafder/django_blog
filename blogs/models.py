@@ -34,4 +34,11 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
     
+
+class About(models.Model):
+    about_us=models.TextField(max_length=500)
+    gitlink=models.URLField(max_length=200)  
+    linkedin=models.URLField(max_length=200)
     
+    def __str__(self):
+        return self.about_us[:10] 
